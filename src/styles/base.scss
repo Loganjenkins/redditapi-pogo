@@ -1,0 +1,41 @@
+html {
+  background: $lightBlue;
+  color: $grey;
+  font-family: $fonts-base;
+  font-size: 1em;
+  margin: 0;
+}
+body {
+  margin: 0;
+}
+
+.h1, .h2, .h3, .h4 {
+  color: $darkBlue;
+  letter-spacing: 1.2;
+  margin-top: 0;
+}
+.h1 {
+  font-size: 32px;
+}
+.h2 {
+  font-size: 27px;
+}
+.h3 {
+  font-size: 22px;
+}
+
+a {
+  color: $darkBlue;
+}
+
+img {
+  max-width: 100%;
+}
+
+.text-small {
+  font-size: 0.7em;
+}
+
+button {
+  font-size: 1.2em;
+}

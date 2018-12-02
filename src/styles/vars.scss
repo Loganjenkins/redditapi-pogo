@@ -1,0 +1,33 @@
+$gutter: 5%;
+$base-size: 16px !default;
+$base-unit: 1em !default;
+$unit:      0.25em !default; //4px
+
+$xsmall: 30em;   //480px
+$small:  35.5em; //568px
+$medium: 48em;   //768px
+$large:  60em;   //960px
+$xlarge: 70em;   //1120px
+
+$large:  60em;   //960px
+
+$white: #ffffff;
+$grey: #434343;
+$darkBlue: #3c5aa6;
+$lightBlue: #2a75bb;
+$gold: #c7a008;
+$yellow: #ffcb05;
+
+$fonts-base: sans-serif;
+
+@mixin respond-min($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin respond-max($width) {
+    @media screen and (max-width: $width - .0125) {
+        @content;
+    }
+}
