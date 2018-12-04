@@ -1,7 +1,7 @@
 {
   "name": "redditapi-pogo",
   "version": "1.0.0",
-  "description": "Reads r/pokemongo posts",
+  "description": "Reads posts from a specified subreddit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

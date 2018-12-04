@@ -1,7 +1,7 @@
 class RedditPosts {
   constructor() {
     // subreddit we want to get posts from
-    this.redditApiUrl = `pokemongo`;
+    this.redditApiUrl = `WonderfulPodcast`;
 
     this.postsPerPage = 25;
     this.currentPage = 0;

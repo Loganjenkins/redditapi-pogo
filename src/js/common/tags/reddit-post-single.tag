@@ -6,10 +6,10 @@
         <img src="{imageUrl}" />
       </div>
       <div class="col {col--3-4: hasImage}">
-        <h3 class="h3">
-          <a href="https://www.reddit.com{ postData.permalink }"
-          target="_blank">{postData.title}</a>
-        </h3>
+        <h3 class="h3">{postData.title}</h3>
+        <p><a href="https://www.reddit.com{ postData.permalink }"
+          target="_blank">Comments</a> <a class="left-pad-link" if={!utils.isNullOrUndefined(externalUrl)}
+          href="{ externalUrl }" target="_blank">External Link</a></p>
         <p class="text-small">posted by: {postData.author} on {createdOnFormatted}</p>
       </div>
     </div>
@@ -19,6 +19,7 @@
     this.postData = opts.post.data;
     this.index = opts.index;
     this.preview = this.postData.preview;
+    this.externalUrl = null;
 
     let createdOn = new Date(this.postData.created_utc*1000);
     // format the UTC date into DD/MM/YY HH:MM
@@ -35,6 +36,11 @@
         this.imageUrl = this.imageUrl.replace('amp;s', 's');
         this.hasImage = true;
       }
+    }
+
+    // check if the post is a link to an external site.
+    if(this.postData.post_hint == 'link') {
+      this.externalUrl = this.postData.url;
     }
   </script>
 </reddit-post-single>
